@@ -1,0 +1,8 @@
+version: "2"
+services:
+  voicevox_engine:
+    # CPUの場合は hiroshiba/voicevox_engine:cpu-ubuntu20.04 を使用
+    image: hiroshiba/voicevox_engine:cpu-ubuntu20.04
+    ports:
+      - "50021:50021"
+    tty: true
