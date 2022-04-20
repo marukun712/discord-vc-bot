@@ -2,7 +2,15 @@ version: "2"
 services:
   voicevox_engine:
     # CPUの場合は hiroshiba/voicevox_engine:cpu-ubuntu20.04 を使用
-    image: hiroshiba/voicevox_engine:cpu-ubuntu20.04
+    image: hiroshiba/voicevox_engine:nvidia-ubuntu20.04-latest
     ports:
       - "50021:50021"
     tty: true
+    #
+    # 以下の項目はCPUの場合はなくても大丈夫
+    #
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - capabilities: [gpu] 
