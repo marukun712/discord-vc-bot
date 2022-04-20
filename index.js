@@ -38,7 +38,7 @@ client.on('message', message => {
 
         function read() {
             createVoice(msg)
-            setTimeout(sendfile, 1500)
+            setTimeout(sendfile, 2000)
         }
 
         read()
