@@ -9,8 +9,3 @@ services:
     #
     # 以下の項目はCPUの場合はなくても大丈夫
     #
-    deploy:
-      resources:
-        reservations:
-          devices:
-            - capabilities: [cpu] 
